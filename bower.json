@@ -1,0 +1,10 @@
+{
+  "name": "startkit-less",
+  "description": "Smart build for Front-End by @GetCreate",
+  "main": "index.js",
+  "authors": [
+    "Nazarov Vitaly"
+  ],
+  "license": "MIT",
+  "dependencies": {}
+}

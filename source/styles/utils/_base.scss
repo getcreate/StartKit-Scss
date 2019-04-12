@@ -1,0 +1,72 @@
+html {
+	font-size: $base-font-size;
+	height: 100%;
+	line-height: $base-line-height;
+}
+body {
+	color: $base-color;
+	font-family: $base-font;
+	font-weight: 400;
+	height: 100%;
+}
+a {
+	color: $base-color;
+	text-decoration: none;
+	font-size: rem(16px);
+}
+p {
+	line-height: $base-line-height;
+}
+body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,input,textarea,p,blockquote,th,td {
+	margin: 0;
+	padding: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+fieldset,img,abbr {
+	border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style: normal;
+	font-weight: normal;
+}
+ul li {
+	list-style: none;
+}
+caption,th {
+	text-align: left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+	font-weight: normal;
+	margin: 0;
+}
+sup {
+	vertical-align: text-top;
+}
+sub {
+	vertical-align: text-bottom;
+}
+input,textarea,select {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+}
+legend {
+	color: $base-color;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main {
+	display: block;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+.container {
+	@include wrapper();
+}
