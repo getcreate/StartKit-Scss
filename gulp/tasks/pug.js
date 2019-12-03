@@ -19,12 +19,12 @@ module.exports = function () {
             }))
             .pipe(pug({
                 locals : {
-                    nav: JSON.parse(fs.readFileSync('./data/navigation.json', 'utf8'))
+                    nav: JSON.parse(fs.readFileSync('./source/blocks/modules/header/navigation.json', 'utf8'))
                 },
                 pretty: true
             }))
             .pipe(plumber.stop())
-            .pipe($.gulp.dest('./public/'))
+            .pipe($.gulp.dest('./public_html/'))
             .on('end', $.browserSync.reload);
     });
 };

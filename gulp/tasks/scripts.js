@@ -1,9 +1,9 @@
-let uglify = require('gulp-uglify'),
+let terser = require('gulp-terser'),
     rename = require('gulp-rename'),
     rigger = require('gulp-rigger'),
     scriptsPATH = {
         "input": "./source/scripts/",
-        "ouput": "./public/js/"
+        "ouput": "./public_html/assets/js/"
     };
 
 module.exports = function () {
@@ -14,7 +14,7 @@ module.exports = function () {
             .pipe($.browserSync.reload({
                 stream: true
             }))
-            .pipe(uglify())
+            .pipe(terser())
             .pipe(rename({suffix: '.min'}))
             .pipe($.gulp.dest(scriptsPATH.ouput));
     });

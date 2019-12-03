@@ -13,20 +13,16 @@ $.path.task.forEach(function (taskPath) {
     require(taskPath)();
 });
 
-$.gulp.task('dev', $.gulp.series(
+$.gulp.task('default', $.gulp.series(
     'clean',
     $.gulp.parallel(
         'pug',
         'fonts',
         'styles',
         'images',
+        'webp',
         'scripts',
-        'svg'
-    )
-));
-$.gulp.task('default', $.gulp.series(
-    'dev',
-    $.gulp.parallel(
+        'svg',
         'watch',
         'serve'
     )

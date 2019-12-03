@@ -4,7 +4,7 @@ let svgSprite = require('gulp-svg-sprite'),
     replace = require('gulp-replace'),
     svgPath = {
         "input": "./source/pictures/svg/*.svg",
-        "output": "./public/img/svg/"
+        "output": "./public_html/assets/img/svg/"
     };
 
 module.exports = function () {

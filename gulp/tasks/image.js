@@ -3,9 +3,9 @@ let imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     cache = require('gulp-cache'),
     imgPATH = {
-        "input": ["./source/pictures/**/*.{png,jpg,gif,svg}",
-            '!./source/pictures/svg/*'],
-        "ouput": "./public/img/"
+        "input": ["./source/images/**/*.{png,jpg,gif,svg}",
+            '!./source/images/svg/*'],
+            "ouput": "./public_html/assets/img/"
     };
 
 module.exports = function () {
@@ -26,6 +26,7 @@ module.exports = function () {
             ], {
                 verbose: true
             })))
-            .pipe($.gulp.dest(imgPATH.ouput));
+            .pipe($.gulp.dest(imgPATH.ouput))
+            .on('end', $.browserSync.reload);
     });
 };
